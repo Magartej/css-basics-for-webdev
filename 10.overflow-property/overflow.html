@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow</title>
+    <style>
+      .box {
+        width: 30vw; /* Change to 30vw to make it responsive */
+        height: 30vh; /* Change to 20vh to make it responsive */
+        border: 2px solid black;
+
+        /* overflow: auto;  Change to hidden to hide the overflow 
+            overflow-x: hidden; Change to scroll to add horizontal scrollbar
+            overflow-y: scroll; Change to visible to show the overflow */
+        overflow: hidden auto; /* hidden in x and auto in y*/
+
+        /* white-space: nowrap; Prevents text from wrapping 
+            text-overflow: ellipsis; Adds ellipsis (...) for overflowed text */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      I am a box with overflow Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Quae, corrupti. Odio at cupiditate tempora beatae ipsum
+      officia reiciendis maiores, dicta molestiae, blanditiis iste, quos
+      incidunt ab. Ducimus harum delectus nisi, aperiam consectetur laudantium
+      dolor.
+    </div>
+  </body>
+</html>
