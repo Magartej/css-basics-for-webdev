@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables in css</title>
+    <style>
+      :root {
+        /* declearing the global veriables */
+        --color: rgb(184, 99, 165);
+        --seccolor: lightblue;
+        --defpad: 23px;
+        --defop: 0.5;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav {
+        background-color: var(--color);
+      }
+
+      ul {
+        display: flex; /* Change to flex to make the list items in a row */
+      }
+
+      ul li {
+        opacity: var(--defop);
+        list-style: none;
+        padding: var(--defpad);
+        border: 2px solid var(--seccolor);
+      }
+
+      ul li:first-child {
+        /* here --color is the local veriable */
+        --color: rgb(188, 102, 21);
+        background-color: var(--color);
+        /* background-color: var(--color, blue);
+        if there is no --color veriable */
+      }
+
+      .container {
+        background-color: var(--seccolor);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="container">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis totam
+      optio saepe natus nulla, delectus consequuntur excepturi blanditiis maxime
+      dolorum. Possimus esse, consequuntur sint similique ipsa natus nulla illum
+      dignissimos ratione veritatis beatae consectetur, at sit nobis! Vel
+      debitis animi doloremque placeat. Pariatur, dignissimos enim?
+    </div>
+  </body>
+</html>
+
+<!-- 
+css variables does not only holdes the color but alos holds the values
+-->
