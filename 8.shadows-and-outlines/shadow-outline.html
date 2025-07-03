@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow and Outline in css</title>
+    <style>
+      .box {
+        border: 2px solid black;
+        padding: 34px;
+        box-shadow: 5px 5px 10px #70a711; /* Horizontal offset, Vertical offset, Blur radius, Color */
+      }
+
+      .text-element {
+        margin-top: 50px;
+        text-shadow: 10px 5px 3px #e695f7; /* Horizontal offset, Vertical offset, Blur radius, Color */
+        outline: 2px solid red; /* Outline around the text */
+        border: 2px solid blue; /* Border around the text */
+        border-radius: 8px; /* Rounded corners for the border */
+        outline-offset: 19px; /* Space between the outline and the border */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">I am a box</div>
+
+    <p class="text-element">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur magni
+      soluta rem molestias quam odio architecto, accusamus odit facilis quasi
+      nam enim repudiandae omnis. Eligendi velit blanditiis facere pariatur
+      doloribus tenetur necessitatibus libero omnis.
+    </p>
+  </body>
+</html>
+
+<!-- 
+Outline is a line that goes around the element, it does not take space and it does not affect the layout of the page.
+Shadow is a shadow that goes around the element, it does not take space and it does not affect the layout of the page.
+-->
