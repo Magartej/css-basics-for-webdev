@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More on CSS Selector</title>
+    <style>
+      /* .box:first-child {
+        background-color: red;
+      } */
+
+      /* .box::first-line {
+        color: blue;
+      } */
+
+      /* .boxes *{
+        color: blue;
+        border: 2px solid black;
+       } */
+
+      /* this is group selector */
+      /* p, a, .box, [data-color="primary"] {
+        margin-top: 45px;
+        padding-top: 30px;
+       } */
+
+      /* this is nth child pseudo selector */
+      /* .box:nth-child(even){
+        color: red;
+       } */
+
+      /* .box:nth-last-child(1){
+        background-color: green;
+        } */
+
+      /* inserting element dynamically through css it is also called pseudo elements*/
+      .boxes::before {
+        content: "Hello";
+        color: red;
+      }
+      .boxes::after {
+        content: "Hi";
+        color: green;
+      }
+
+      ::selection {
+        color: aqua;
+        background-color: black;
+      }
+
+      .box::first-letter {
+        color: saddlebrown;
+        font-size: 20px;
+      }
+
+      /* input element */
+      input::placeholder {
+        color: black;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div data-color="primary" class="box">I am box</div>
+      <div class="box">I am box</div>
+      <div class="box">I am box</div>
+      <input type="text" placeholder="Enter here" />
+    </div>
+  </body>
+</html>
