@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box-model</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        background-color: aqua;
+      }
+      .box1 {
+        color: yellow;
+        padding: 10px;
+        margin: 15px;
+        border: 2px solid blue;
+        height: 100px;
+        box-sizing: border-box;
+      }
+      .box2 {
+        color: red;
+        padding: 10px;
+        margin: 15px;
+        border: 2px solid black;
+        height: 100px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">I am box</div>
+    <div class="box box2">I am another box</div>
+  </body>
+</html>
+
+<!-- 
+The CSS Box Model is a fundamental concept in web design and layout. It describes how elements on a web page are structured and how space is calculated around them. It is made up of four main components: content, padding, border, and margin.
+In content area, the actual text or image is displayed. 
+
+Padding is the space between the content and the border which adds space inside the element around the content.
+
+The border wraps around the padding and content, and you can set its width, style and color.
+
+Margin is the space outside the border which separates the element from other elements on the page.
+
+This example demonstrates the CSS Box Model by creating two boxes with different styles. Each box has a background color, text color, padding, margin, and border. 
+
+This example uses the `box-sizing: border-box;` property to include padding and border in the element's total width and height, which is a common practice in modern web design. 
+
+Here the concept margincollapses occured as two vertical margins meets, and in margincollapse the larger of the two margins applied and the smaller one will be ignored.
+-->

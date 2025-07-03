@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector CSS</title>
+    <style>
+      /* universal selector 
+      It selects all elements in the document.
+      */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* element selector
+      It selects all elements of a specific type.
+      For example, it selects all <div> elements.
+      */
+      div {
+        background-color: gray;
+      }
+
+      /* class selector 
+      It selects all elements with a specific class.
+      For example, it selects all elements with the class "red" and it can be used multiple times in a document.
+      */
+      .red {
+        background-color: red;
+        color: white;
+      }
+
+      /* id selector 
+      It selects a single element with a specific id.
+      For example, it selects the element with the id "green" and it should be unique in the document.
+      */
+      #green {
+        background-color: green;
+      }
+
+      /* descendant selector
+      It selects all the element that are inside another element.
+      For example, it selects all <p> elements that are inside a <div> element
+      */
+      div p {
+        color: purple;
+      }
+
+      /* child selector
+      It selects all the elements that are direct children only. 
+      */
+      div > p {
+        color: blue;
+        background-color: white;
+      }
+
+      /* pseudo selector 
+      It selects elements based on their state or position.
+      For example, it selects links based on their state (visited, link, active, hover).
+      */
+
+      a:visited {
+        color: green;
+      }
+      a:link {
+        color: red;
+      }
+      a:active {
+        background-color: yellow;
+      }
+      a:hover {
+        background-color: blue;
+      }
+      p:first-child {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      This is div
+      <!-- <p>This is para inside div</p> -->
+    </div>
+    <div class="red">This is second div</div>
+    <div id="green">
+      This is another div
+      <p>This is first</p>
+      <p>This is second</p>
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+    <div class="one">
+      <p>I am first</p>
+    </div>
+  </body>
+</html>
