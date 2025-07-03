@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity</title>
+    <style>
+      /* The specificity of this selector is 1 */
+      h1 {
+        color: aqua;
+      }
+      h2 {
+        color: black;
+      }
+
+      /* The specificity of this selector is 10 */
+      .yellow {
+        color: yellow;
+      }
+
+      /* The specificity of this selector is 10 */
+      /* when h2 is added the specificity of this selector is 10 + 1 = 11 so color will be red */
+      h2.cred {
+        color: red;
+      }
+
+      /* The specificity of this selector is 10 */
+      .cpurple {
+        color: purple;
+      }
+
+      /* The specificity of this selector is 10 */
+      .cblue {
+        color: green;
+      }
+
+      /* 
+      This is example of attribute selector and its specificity is 10
+        */
+
+      [data-x="a"] {
+        color: magenta;
+      }
+
+      /* The specificity of this selector is 10,000 as there is important added*/
+
+      .cblack {
+        color: black !important;
+      }
+
+      /*  
+      a element + myclass is class + ramclass is class + [href] is attribute selector + hover is pseudoclass
+      so the specificity of this selector is 1+10+10+10+10= 41
+      */
+
+      a.myclass.ram-class[href]:hover {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 style="color: blue" class="yellow">CSS Specificity</h1>
+      <h2 class="yellow cred cpurple" data-x="a">CSS Specificity</h2>
+      <h3 class="yellow cred cpurple cblack" data-x="a">CSS Specificity</h3>
+    </div>
+  </body>
+</html>
+
+<!-- 
+
+Cascade algorithm determines which style to apply when multiple styles are defined for the same element. It has 4 rules:
+1. Position and order: If two styles have the same specificity, the one that comes last in the CSS will be applied.
+2. Specificity: Styles with higher specificity override those with lower specificity.
+3. Origin: The order in which css appears and where ir comes from, whether that is a browser style, CSS from a browser extension or your auther css
+4. Importance: Styles marked as important override all other styles.
+
+The order of the specificity is as follows:
+inline styles > IDs > classe or attributes > elements selectors > universal selector
+
+here in h1 the color is blue as the inline style is applied because it has the highest specificity.
+
+The h2 element has multiple classes applied to it, and the last class in the order is applied,  which is cpurples so the color is purple.
+The attribute selector is commented out, but if it were applied, it would have a lower specificity
+
+-->
