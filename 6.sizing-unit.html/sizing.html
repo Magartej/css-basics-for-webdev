@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sizing unit in css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* px is a fixed unit, but it can be relative to the screen resolution */
+      /* vw is the viewport widtg and vh is the viewport height */
+      /* vmin is the smaller of the viewport width and height, and vmax is the larger */
+      /* rem is the root em, which is relative to the font size of the root element (html) */
+      /* em is relative to the font size of the element itself */
+      /* % is relative to the parent element */
+      /* px is a fixed unit, but it can be relative to the screen resolution */
+
+      html {
+        font-size: 18px; /* This sets the base font size */
+      }
+
+      .box {
+        box-sizing: border-box;
+        border: 2px solid black;
+        /* width: 250px; */
+        width: 80vw; /* 80% of the viewport width */
+        height: 10vh; /* 10% of the viewport height */
+        margin: auto; /* Center the box horizontally */
+        background-color: aquamarine;
+      }
+
+      .container {
+        box-sizing: border-box;
+        border: 2px solid black;
+        /* width: 250px; */
+        width: 80vw;
+        /* height: 80vh; */
+        min-height: 80vh; /* Minimum height of 80% of the viewport height */
+        margin: 23px auto;
+        font-size: 15px;
+        background-color: aquamarine;
+      }
+
+      .container > div {
+        font-size: 1.5rem;
+        /* font-size: 1.5em; */
+        /* 1.5rem is 1.5 times the base font size (18px) */
+        border: 2px solid black;
+        width: 50%; /* 50% of the container width */
+      }
+
+      .container > div > div {
+        border: 2px solid black;
+        width: 50%; /* 50% of the container width */
+      }
+
+      .mycont {
+        box-sizing: border-box;
+        border: 2px solid black;
+        margin: 23px auto;
+        font-size: 22px;
+        /* width: 100vmin; 100% of the smaller viewport dimension */
+        width: 80vw;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">This is a box</div>
+
+    <div class="container">
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, hic
+        possimus nisi et placeat soluta provident autem deserunt atque dolorum
+        temporibus quibusdam voluptatem sit suscipit nam omnis iste minus
+        officiis voluptatum cum porro molestias odit. In ipsum ex obcaecati nisi
+        voluptates, aliquam reiciendis quam dolore adipisci quasi ipsam, nemo
+        ullam mollitia. Ex delectus impedit cumque necessitatibus?
+
+        <div>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda
+          ratione, dignissimos reprehenderit laudantium quam ipsam! Ab, animi.
+          Vel unde neque impedit expedita error.
+        </div>
+      </div>
+    </div>
+
+    <div class="mycont">I am another container</div>
+  </body>
+</html>
