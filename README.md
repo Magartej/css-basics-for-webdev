@@ -9,38 +9,64 @@ This repository contains hands-on code and examples that demonstrate essential C
 ## 📁 Folder Structure
 
 css-basics-for-webdev/
-├── 01_inline_internal_external/ # Examples of inline, internal, and external CSS
+
+├── 01_inline_internal_external/
+
 │ ├── inline.html
+
 │ ├── internal.html
+
 │ ├── external.html
+
 │ └── style.css
+
 │
 ├── 02_selectors/ # Various CSS selectors
+
 │ ├── element_selector.html
+
 │ ├── id_selector.html
+
 │ ├── class_selector.html
+
 │ ├── universal_selector.html
+
 │ └── group_selector.html
+
 │
 ├── 03_box_model/ # CSS Box model illustration
+
 │ ├── box_model.html
+
 │ └── style.css
+
 │
 ├── 04_margin_padding_border/ # Margin, padding, and border examples
+
 │ ├── margin_padding.html
+
 │ ├── border.html
+
 │ └── style.css
+
 │
 ├── 05_display_position/ # Display types and positioning
+
 │ ├── display.html
+
 │ ├── position.html
+
 │ └── style.css
+
 │
 ├── 06_flexbox_grid/ # Flexbox and CSS Grid layout examples
+
 │ ├── flexbox.html
+
 │ ├── grid.html
+
 │ └── style.css
-│
+
 └── README.md
 
 Each folder focuses on a specific topic in CSS and includes relevant HTML and CSS files for practice and demonstration.
